@@ -3,33 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume - Aakash K</title>
+  <title>Resume</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+    }
+
+    nav {
+      background: #002366;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     .resume-container {
-      max-width: 900px;
-      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 30px;
+      gap: 20px;
+    }
+
+    .resume-content {
+      flex: 3;
       background: #ffffff;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .profile-pic {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 20px;
+
+    .downloads-box {
+      flex: 1;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      position: sticky;
+      top: 20px;
     }
-    h1 {
+
+    .downloads-box h2 {
       color: #002366;
+      margin-bottom: 15px;
     }
-    h2 {
-      border-bottom: 2px solid #002366;
-      padding-bottom: 5px;
-      margin-top: 30px;
-      color: #002366;
+
+    .download-btn {
+      display: block;
+      background: #002366;
+      color: white;
+      padding: 10px 15px;
+      margin: 10px auto;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      width: fit-content;
     }
-    ul {
-      text-align: left;
+    .download-btn:hover {
+      background: #0055cc;
     }
   </style>
 </head>
@@ -42,52 +84,45 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <header>
-    <h1>Resume</h1>
-  </header>
+  <div class="resume-container">
+    <!-- Main Resume Content -->
+    <div class="resume-content">
+      <h1>Aakash K</h1>
+      <p><strong>Mechanical Engineer | CAD Administrator</strong></p>
 
-  <section class="resume-container" style="text-align:center;">
-    <img src="Aakash K.jpg" alt="Profile Photo" class="profile-pic">
-    <h1>Aakash K</h1>
-    <p><strong>Mechanical Engineer | CAD Administrator</strong></p>
+      <h2>Profile</h2>
+      <p>I am a Mechanical Engineer with 1.5 years of experience in the oil and gas industry as a CAD Administrator...</p>
 
-    <h2>Profile</h2>
-    <p>I am a Mechanical Engineer with 1.5 years of experience in the oil and gas industry as a CAD Administrator. With a strong engineering foundation, I have worked on both onshore and offshore projects, focusing on AVEVA E3D 3D modeling software administration, customization, and technical support.</p>
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>2025 – Present:</strong> E3D CAD Administrator at Exxon Mobil</li>
+        <li><strong>2024 – 2025:</strong> E3D CAD Administrator at Kairas Power & Calik Enerji</li>
+        <li><strong>2023 – 2024:</strong> E3D CAD Administrator at Shell & Fidelis</li>
+      </ul>
 
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>2025 – Present:</strong> E3D CAD Administrator at Exxon Mobil (West Coker, Holly Resin Blend)</li>
-      <li><strong>2024 – 2025:</strong> E3D CAD Administrator at Kairas Power (Mexico) & Calik Enerji (Libya)</li>
-      <li><strong>2023 – 2024:</strong> E3D CAD Administrator at Shell (Australia) & Fidelis (Denmark)</li>
-    </ul>
+      <h2>Skills</h2>
+      <ul>
+        <li>AVEVA E3D Administration & Customization (PML scripting)</li>
+        <li>Database management, troubleshooting, automation</li>
+        <li>2D Drawing extraction, Navisworks integration</li>
+      </ul>
 
-    <h2>Skills</h2>
-    <ul>
-      <li>AVEVA E3D Administration & Customization (PML scripting)</li>
-      <li>Database management, troubleshooting, automation</li>
-      <li>2D Drawing extraction, Navisworks integration</li>
-    </ul>
+      <h2>Education</h2>
+      <p>B.E. Mechanical Engineering</p>
 
-    <h2>Education</h2>
-    <p>B.E. Mechanical Engineering</p>
+      <h2>Languages</h2>
+      <p>English, Tamil, Hindi, Malayalam, German</p>
 
-    <h2>Languages</h2>
-    <p>English, Tamil, Hindi, Malayalam, German</p>
+      <h2>Awards</h2>
+      <p>Award for Outstanding Performance and Commitment to Excellence</p>
+    </div>
 
-    <h2>Awards</h2>
-    <p>Award for Outstanding Performance and Commitment to Excellence</p>
-    <h2>Downloads</h2>
-    <a href="Aakash K.docx" class="download-btn" download full resume>📑 Download Resume</a>
-
-  </section>
-
-  <footer>
-    <p>&copy; 2025 My Blog | Built with GitHub Pages</p>
-  </footer>
+    <!-- Sidebar Downloads Box -->
+    <aside class="downloads-box">
+      <h2>Downloads</h2>
+      <a href="Aakash K.docx" class="download-btn" download full resume>📑 Download Resume</a>
+    </aside>
+  </div>
 
 </body>
 </html>
-
-
-
-

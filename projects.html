@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-list {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    .project-card {
+      background: #ffffff;
+      border: 1px solid #002366;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 10px 0;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .project-card:hover {
+      background: #f0f8ff;
+    }
+    h1 {
+      text-align: center;
+      color: #002366;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h1>My Projects</h1>
+
+  <div class="project-list">
+    <!-- Currently one project -->
+    <div class="project-card" onclick="location.href='project1.html'">
+      <h2>Investigation of Heat Generation During Bobbin Tool Friction Stir Welding on Dissimilar Aluminum Alloy</h2>
+      <p>Final year UG project focused on experimental study of heat generation in BT-FSW.</p>
+    </div>
+  </div>
+
+</body>
+</html>

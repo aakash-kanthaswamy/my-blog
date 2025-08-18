@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery-container {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      padding: 20px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery-item {
+      background: #ffffff;
+      border: 1px solid #002366;
+      border-radius: 8px;
+      padding: 10px;
+    }
+    h1 {
+      color: #002366;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="gallery-container">
+    <h1>My Gallery</h1>
+    <p>Coming soon... photos organized by category</p>
+    <div class="gallery-grid">
+      <!-- Future categories like Academic, Personal, Travel -->
+    </div>
+  </div>
+
+</body>
+</html>

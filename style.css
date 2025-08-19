@@ -47,17 +47,17 @@ nav a:hover::after {
 header {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(135deg, #0047ab, #6a11cb); /* Blue → Purple */
+    background: linear-gradient(135deg, #002366, #0047ab); /* Dark → Light Blue */
     color: white;
     animation: fadeIn 1.5s ease;
 }
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
 }
 header p {
     font-size: 1.2rem;
-    color: #f4f4f4;
+    color: #f0f0f0;
 }
 
 /* Section */
@@ -66,7 +66,7 @@ section {
     max-width: 1000px;
     margin: auto;
     background: white;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     animation: fadeUp 1s ease;
     margin-bottom: 30px;
@@ -79,12 +79,12 @@ section {
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-    border-left: 6px solid #ff7b00; /* Orange accent border */
+    border-top: 5px solid #ff7b00; /* Orange accent */
 }
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    border-left: 6px solid #002366; /* Blue hover */
+    border-top: 5px solid #002366; /* Blue hover accent */
 }
 
 /* Buttons */
@@ -93,21 +93,21 @@ button {
   display: inline-block;
   background: linear-gradient(90deg, #ff7b00, #ff9800); /* Orange gradient */
   color: white;
-  padding: 12px 20px;
+  padding: 12px 25px;
   margin-top: 15px;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 30px;
   font-weight: bold;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 .download-btn:hover,
 button:hover {
   background: linear-gradient(90deg, #002366, #0047ab); /* Blue hover */
-  transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
 }
 
 /* Footer */
@@ -129,3 +129,4 @@ footer {
   from {opacity: 0; transform: translateY(20px);}
   to {opacity: 1; transform: translateY(0);}
 }
+

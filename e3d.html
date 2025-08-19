@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E3D Administration</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+    }
+    nav {
+      background: #002366;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #002366, #0047ab);
+      color: white;
+    }
+    .gallery {
+      max-width: 1000px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .gallery-item .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 35, 102, 0.8);
+      color: white;
+      padding: 10px;
+      font-size: 0.9rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .gallery-item:hover .caption {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+    <a href="mywork.html">My Work</a>
+  </nav>
+
+  <header>
+    <h1>E3D Administration</h1>
+  </header>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="images/e3d-setup.png" alt="E3D Setup">
+      <div class="caption">Project setup and environment configuration in AVEVA E3D.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/e3d-model.png" alt="E3D Model">
+      <div class="caption">Maintaining model consistency and resolving conflicts.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/e3d-database.png" alt="Database">
+      <div class="caption">Database management and troubleshooting.</div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -27,6 +27,22 @@
       text-decoration: underline;
     }
 
+    /* ✅ Resume Header (Hero style like Home) */
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #002366, #0047ab);
+      color: white;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #e0e0e0;
+    }
+
     .resume-container {
       display: flex;
       justify-content: center;
@@ -61,22 +77,24 @@
 
     .download-btn {
       display: block;
-      background: #002366;
+      background: #ff7b00;
       color: white;
-      padding: 10px 15px;
+      padding: 12px 18px;
       margin: 10px auto;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
       font-weight: bold;
       width: fit-content;
+      transition: background 0.3s ease;
     }
     .download-btn:hover {
-      background: #0055cc;
+      background: #002366;
     }
   </style>
 </head>
 <body>
 
+  <!-- ✅ Navbar -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -84,14 +102,17 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <!-- ✅ Header with Name (like Home) -->
+  <header>
+    <h1>PROFILE OVERVIEW</h1>
+    <p>Mechanical Engineer</p>
+  </header>
+
   <div class="resume-container">
     <!-- Main Resume Content -->
     <div class="resume-content">
-      <h1>Aakash K- Profile Overview</h1>
-      <p><strong>Mechanical Engineer | CAD Administrator</strong></p>
-
       <h2>Profile</h2>
-      <p>I am a Mechanical Engineer with 1.5 years of experience in the oil and gas industry as a CAD Administrator...</p>
+      <p>I am a Mechanical Engineer with 2 years of experience in the oil and gas industry as a E3D CAD Administrator...</p>
 
       <h2>Experience</h2>
       <ul>
@@ -120,10 +141,9 @@
     <!-- Sidebar Downloads Box -->
     <aside class="downloads-box">
       <h2>Downloads</h2>
-      <a href="Aakash K.docx" class="download-btn" download full resume>📑 Download Resume</a>
+      <a href="Aakash K.docx" class="download-btn" download>📑 Download Resume</a>
     </aside>
   </div>
 
 </body>
 </html>
-

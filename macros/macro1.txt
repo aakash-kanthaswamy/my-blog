@@ -1,1 +1,103 @@
-rfgr
+FINCH BORE FINCH DIST
+
+var !ref ce
+
+!data = Array()
+!rule = |MATCHWILD(NAME OF SITE,'/PCWA?????')|
+
+var !elems Coll all BRAN MEM with $!rule and not(type inset('BEND','ATTA','WELD'))
+
+!titles = split('REF',',')
+-- !att = split('TYPE,NAME,DTXR,ITLE,NWEI,P1BORE,P2BORE,P3BORE,SPOW,ISPEC,INSU,TEMP OF BRAN,PIPE,MTOCOMPONENT,ZONE,SITE,',',')
+
+!table = Array()
+
+!table.append(Split('NAMN OF SITE,NAME OF SITE,',','))
+
+!table.append(Split('ZONE,NAME OF ZONE,',','))
+
+!table.append(Split('PIPE,LINE ID,',','))
+
+!table.append(Split('NAMN OF SPOW,Pipe Spec,',','))
+
+!table.append(Split('MTXX,BASE MATERIAL,',','))
+
+!table.append(Split(',MATERIAL GRADE,',','))
+
+!table.append(Split('P1BORE,Size 1,0in',','))
+
+!table.append(Split('P2BORE,Size 2,0in',','))
+
+!table.append(Split('P3BORE,Size 3,0in',','))
+
+!table.append(Split('TYPE,COMPONENT TYPE,',','))
+
+!table.append(Split('STYP,SHORT CODE,',','))
+
+!table.append(Split('Angle,Angle,',','))
+
+!table.append(Split('DTXR,Component Description,',','))
+
+!table.append(Split('ITLE,Quantity,1',','))
+
+!table.append(Split('INSU,INSULATION THICKNESS,',','))
+
+!table.append(Split('ITLEN,PIPE LENGTH,',','))
+
+!table.append(Split('P1Conn,Conn 1,',','))
+
+!table.append(Split('P2Conn,Conn 2,',','))
+
+!table.append(Split('P3Conn,Conn 3,',','))
+
+!table.append(Split('NWEI,Weight,0kg',','))
+
+!table.append(Split('NAMN OF ISPEC,Insulation Code,N',','))
+
+!table.append(Split('TEMP OF BRAN,Temperature,0degC',','))
+
+
+
+!attributes = !table.evaluate(object block('!table[!evalindex][1]'))
+!header = !table.evaluate(object block('!table[!evalindex][2]'))
+!defvalues = !table.evaluate(object block('!table[!evalindex][3]'))
+
+Do !ce values !elems
+	$!ce
+	!row = Array()
+	!row.append(!ce)
+	Do !x indices !attributes
+		!att = !attributes[!x]
+		var !res $!att
+		Handle Any
+			!row.append(!defvalues[!x])
+			skip
+		Endhandle
+		if !res eq 'TUBI' and !x eq 1 then
+			!row.append('PIPE')
+			skip
+		Endif
+		!row.append(!res)
+	Enddo
+	!data.append(!row)
+Enddo
+
+!header.insert(1,'E3D Reference')
+
+import 'GridControl'
+handle any
+endhandle
+
+using namespace 'Aveva.Core.Presentation'
+!grid = object NETGRIDCONTROL()
+!source = object NetDataSource('CKW_E3D_Component_Report',!header,!data)
+!grid.BindToDataSource(!source, true)
+!xlsxfile = object File('%pdmsuser%')
+!fpath = !xlsxfile.fullname() + '\CKW_E3D_Component_Report.xlsx'
+!grid.saveGridToExcel(!fpath)
+
+if !!alert.confirm('Click YES to view report') eq 'YES' then
+	Syscom 'Start $!fpath'
+Endif
+
+$!ref

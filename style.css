@@ -3,7 +3,7 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Light Grey background */
     color: #333;
     line-height: 1.6;
 }
@@ -37,7 +37,7 @@ nav a::after {
     transition: width 0.3s ease;
 }
 nav a:hover {
-    color: #ff7b00;
+    color: #ff7b00; /* Orange hover */
 }
 nav a:hover::after {
     width: 100%;
@@ -47,7 +47,7 @@ nav a:hover::after {
 header {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(135deg, #002366, #0047ab);
+    background: linear-gradient(135deg, #0047ab, #6a11cb); /* Blue → Purple */
     color: white;
     animation: fadeIn 1.5s ease;
 }
@@ -57,10 +57,10 @@ header h1 {
 }
 header p {
     font-size: 1.2rem;
-    color: #e0e0e0;
+    color: #f4f4f4;
 }
 
-/* Content Section */
+/* Section */
 section {
     padding: 40px 20px;
     max-width: 1000px;
@@ -72,24 +72,26 @@ section {
     margin-bottom: 30px;
 }
 
-/* Cards (for Projects, Gallery, etc.) */
+/* Cards */
 .card {
-    background: white;
+    background: #ffffff;
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    border-left: 6px solid #ff7b00; /* Orange accent border */
 }
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-left: 6px solid #002366; /* Blue hover */
 }
 
 /* Buttons */
 .download-btn,
 button {
   display: inline-block;
-  background: linear-gradient(90deg, #002366, #0047ab);
+  background: linear-gradient(90deg, #ff7b00, #ff9800); /* Orange gradient */
   color: white;
   padding: 12px 20px;
   margin-top: 15px;
@@ -103,7 +105,7 @@ button {
 }
 .download-btn:hover,
 button:hover {
-  background: linear-gradient(90deg, #ff7b00, #ff9800);
+  background: linear-gradient(90deg, #002366, #0047ab); /* Blue hover */
   transform: scale(1.05);
   box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }

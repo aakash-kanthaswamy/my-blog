@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Work</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+    }
+
+    nav {
+      background: #002366;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #002366, #0047ab);
+      color: white;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    .work-list {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .work-item {
+      background: #fff;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      text-align: center;
+    }
+    .work-item:hover {
+      transform: translateY(-5px);
+      background: #f0f8ff;
+    }
+    .work-item h2 {
+      margin: 0;
+      color: #002366;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header>
+    <h1>My Work</h1>
+    <p>A showcase of my professional projects and expertise</p>
+  </header>
+
+  <div class="work-list">
+    <div class="work-item" onclick="location.href='e3d.html'">
+      <h2>E3D Administration</h2>
+    </div>
+    <div class="work-item" onclick="location.href='scripting.html'">
+      <h2>Scripting & Automation</h2>
+    </div>
+    <div class="work-item" onclick="location.href='navisworks.html'">
+      <h2>Navisworks Integration</h2>
+    </div>
+  </div>
+
+</body>
+</html>

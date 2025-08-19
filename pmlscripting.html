@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scripting & Automation</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+    }
+    nav {
+      background: #002366;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #002366, #0047ab);
+      color: white;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    .macro-list {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .macro-item {
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 4px solid #ff7b00;
+      background: #f4f8ff;
+      border-radius: 5px;
+      transition: background 0.2s ease;
+    }
+    .macro-item:hover {
+      background: #eaf2ff;
+    }
+    .macro-item h2 {
+      margin: 0 0 5px 0;
+      color: #002366;
+    }
+    .macro-item p {
+      margin: 0 0 10px 0;
+      font-size: 0.95rem;
+      color: #333;
+    }
+    .macro-item a {
+      display: inline-block;
+      background: #002366;
+      color: white;
+      padding: 8px 12px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+    .macro-item a:hover {
+      background: #0055cc;
+    }
+    .note {
+      text-align: center;
+      margin-top: 30px;
+      color: #555;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+    <a href="mywork.html">My Work</a>
+  </nav>
+
+  <header>
+    <h1>Scripting & Automation</h1>
+    <p>Custom PML Macros developed for automation in AVEVA E3D</p>
+  </header>
+
+  <div class="macro-list">
+
+    <!-- Example Macro 1 -->
+    <div class="macro-item">
+      <h2>Pipe Placement Automation</h2>
+      <p>This macro automates repetitive pipe placement tasks, reducing design time significantly.</p>
+      <a href="macros/macro1.txt" download>📥 Download</a>
+    </div>
+
+    <!-- Example Macro 2 -->
+    <div class="macro-item">
+      <h2>Attribute Extractor</h2>
+      <p>Extracts attributes from components and generates a formatted report for engineering review.</p>
+      <a href="macros/macro2.txt" download>📥 Download</a>
+    </div>
+
+    <!-- Example Macro 3 -->
+    <div class="macro-item">
+      <h2>Drawing Cleanup Tool</h2>
+      <p>Cleans up unused elements in drawings and optimizes layout for better readability.</p>
+      <a href="macros/macro3.txt" download>📥 Download</a>
+    </div>
+
+  </div>
+
+  <p class="note">🔒 For additional macros, please <a href="contact.html">request access</a>.</p>
+
+</body>
+</html>
